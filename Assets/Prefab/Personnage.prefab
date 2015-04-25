@@ -17,7 +17,7 @@ GameObject:
   - 114: {fileID: 11403272}
   m_Layer: 8
   m_Name: Personnage
-  m_TagString: Untagged
+  m_TagString: PlayerActor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ Rigidbody2D:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!58 &5840840
 CircleCollider2D:
   m_ObjectHideFlags: 1

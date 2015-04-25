@@ -7,7 +7,7 @@ TagManager:
   - Background
   - Pick Up
   - PNJ
-  - Effector
+  - PlayerActor
   layers:
   - Default
   - TransparentFX

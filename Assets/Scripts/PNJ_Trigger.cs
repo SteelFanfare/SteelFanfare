@@ -19,6 +19,7 @@ public class PNJ_Trigger : MonoBehaviour {
         if (other.transform.tag == "PNJ")
         {
             other.transform.GetComponent<PNJ>().enabled = false;
+            other.transform.GetComponent<Rigidbody2D>().isKinematic = true;
             other.transform.gameObject.layer = 9;
         }
     }

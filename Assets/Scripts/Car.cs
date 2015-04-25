@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Car : MonoBehaviour {
 
-	public int lifetime = 2;
+	public int lifetime = 3;
 	private float delay;
 
 	void Start() {

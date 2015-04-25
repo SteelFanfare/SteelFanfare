@@ -8,6 +8,8 @@ public class Manager : MonoBehaviour {
     public int score;
     public int PNJDead;
 
+	private CharacControl caracControl;
+
     public enum radio
     {
         Electro,
@@ -20,6 +22,8 @@ public class Manager : MonoBehaviour {
     private Slider slider;
     private Text scoreText;
 
+	private GameObject textPNJLife;
+
 	void Awake () 
     {
         //radio de base : pas de radio
@@ -28,6 +32,8 @@ public class Manager : MonoBehaviour {
         textRadio.text = "radio : No-Radio";
         slider = GameObject.Find("Slider").GetComponent<Slider>();
         scoreText = GameObject.Find("TextScore").GetComponent<Text>();
+		caracControl = GameObject.Find("GroupeJoueur").GetComponent<CharacControl>();
+
 	}
 	
 	void Update ()
@@ -58,4 +64,17 @@ public class Manager : MonoBehaviour {
         }
         #endregion
     }
+
+
+	public void killCharacter(GameObject character)
+	{
+		lifes--;
+		
+		int i = 0;
+		while (caracControl.characters[i].gameObject != character) {
+			i++;
+		}
+		
+		caracControl.characters [i].SetActive (false);
+	}
 }

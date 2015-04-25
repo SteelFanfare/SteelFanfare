@@ -21,6 +21,7 @@ public class PNJ : MonoBehaviour {
 
     private Manager manager;
     public bool evangelisable;
+    private float delta;
 
     void Awake()
     {
@@ -31,7 +32,7 @@ public class PNJ : MonoBehaviour {
 
     void Update()
     {
-
+        delta = Time.deltaTime;
         Vector3 dir = transform.position - leader.transform.position;
         dir.Normalize();
 
@@ -44,26 +45,26 @@ public class PNJ : MonoBehaviour {
                 //aime
                 evangelisable = true;
                 transform.tag = "PNJ";
-                m_rigid.velocity = -dir * speed * Time.deltaTime;
+                m_rigid.velocity = -dir * speed * delta;
             }
             else  if (manager.activeRadio == 1) //rock
             {
                 //aime pas
                 evangelisable = false;
                 transform.tag = "PNJ";
-                m_rigid.velocity = dir * speed * Time.deltaTime;
+                m_rigid.velocity = dir * speed * delta;
             }
             else if (manager.activeRadio == 2) //HipHop
             {
                 evangelisable = false;
-                transform.tag = "Background";
-                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                transform.position = newPos;
             }
             else if (manager.activeRadio == 3) //NoRadio
             {
                 evangelisable = false;
-                transform.tag = "Background";
-                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                transform.position = newPos;
             }
                 
         }
@@ -72,28 +73,28 @@ public class PNJ : MonoBehaviour {
             if (manager.activeRadio == 0) //electro
             {
                 evangelisable = false;
-                transform.tag = "Background";
-                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                transform.position = newPos;
             }
             else if (manager.activeRadio == 1) //rock
             {
                 //aime
                 evangelisable = true;
                 transform.tag = "PNJ";
-                m_rigid.velocity = -dir * speed * Time.deltaTime;
+                m_rigid.velocity = -dir * speed * delta;
             }
             else if (manager.activeRadio == 2) //HipHop
             {
                 evangelisable = false;
                 //aime pas
                 transform.tag = "PNJ";
-                m_rigid.velocity = dir * speed * Time.deltaTime;
+                m_rigid.velocity = dir * speed * delta;
             }
             else if (manager.activeRadio == 3) //NoRadio
             {
                 evangelisable = false;
-                transform.tag = "Background";
-                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                transform.position = newPos;
             }
         }
         else if (PNJ_Status == PNJ_Type.HipHop_FAN)
@@ -103,26 +104,26 @@ public class PNJ : MonoBehaviour {
             {
                 //aime pas
                 transform.tag = "PNJ";
-                m_rigid.velocity = dir * speed * Time.deltaTime;
+                m_rigid.velocity = dir * speed * delta;
             }
             else if (manager.activeRadio == 1) //rock
             {
                 evangelisable = false;
-                transform.tag = "Background";
-                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                transform.position = newPos;
             }
             else if (manager.activeRadio == 2) //HipHop
             {
                 //aime
                 evangelisable = true;
                 transform.tag = "PNJ";
-                m_rigid.velocity = -dir * speed * Time.deltaTime;
+                m_rigid.velocity = -dir * speed * delta;
             }
             else if (manager.activeRadio == 3) //NoRadio
             {
                 evangelisable = false;
-                transform.tag = "Background";
-                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                transform.position = newPos;
             }
         }
     }

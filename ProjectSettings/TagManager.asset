@@ -9,6 +9,7 @@ TagManager:
   - PNJ
   - PlayerActor
   - Effector
+  - Situation
   layers:
   - Default
   - TransparentFX

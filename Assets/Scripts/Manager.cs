@@ -7,8 +7,8 @@ public class Manager : MonoBehaviour {
     private enum radio
     {
         Electro,
-        Musette,
-        Jazz,
+        Rock,
+        HipHop,
         NoRadio
     }
     public int activeRadio;
@@ -35,7 +35,7 @@ public class Manager : MonoBehaviour {
         }
         else if (Input.GetButton("B_manette"))
         {
-            activeRadio = (int)radio.Jazz;
+            activeRadio = (int)radio.HipHop;
         }
         else if (Input.GetButton("X_manette"))
         {
@@ -43,7 +43,7 @@ public class Manager : MonoBehaviour {
         }
         else if (Input.GetButton("Y_manette"))
         {
-            activeRadio = (int)radio.Musette;
+            activeRadio = (int)radio.Rock;
         }
         #endregion
     }

@@ -21,8 +21,6 @@ public class CharacControl : MonoBehaviour
         velo = Vector3.zero;
     }
 
-
-
 	void Update ()
     {
         #region valeurs a réassigner à chaque frame

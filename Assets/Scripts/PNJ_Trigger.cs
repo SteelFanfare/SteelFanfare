@@ -23,3 +23,4 @@ public class PNJ_Trigger : MonoBehaviour {
         }
     }
 }
+    

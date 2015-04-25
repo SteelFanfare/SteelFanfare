@@ -3,13 +3,15 @@ using System.Collections;
 
 public class CaracManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		Debug.Log ("collision!");
+		if (other.gameObject.tag == "Pick Up") {
+			other.gameObject.SendMessage("OnPlayerEnter");
+			other.gameObject.SetActive (false);
+		} else if (other.gameObject.tag == "Effector") {
+			other.gameObject.SendMessage("OnPlayerEnter");
+		}
+	}	
+
 }

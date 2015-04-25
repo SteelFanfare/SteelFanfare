@@ -10,17 +10,20 @@ public class Procedural : MonoBehaviour {
 
     private int rand;
 
+    void Start()
+    {
+        InvokeRepeating("spawnBloc", 0, 5.0f);
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Situation")
-        {
-            rand = Random.Range(0, blocs.Length);
-            Instantiate(blocs[rand], spawnerSituations.transform.position, Quaternion.identity);
-        }
         if (other.tag == "Background")
         {
             Instantiate(background, spawnerBG.transform.position, Quaternion.identity);
         }
+
+
+
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -29,9 +32,16 @@ public class Procedural : MonoBehaviour {
         {
             Destroy(other.gameObject);
         }
-        if (other.tag == "Situation")
+
+        if (other.tag == "PNJ")
         {
             Destroy(other.gameObject);
         }
+    }
+
+    void spawnBloc()
+    {
+        rand = Random.Range(0, blocs.Length);
+        Instantiate(blocs[rand], spawnerSituations.transform.position, Quaternion.identity);
     }
 }

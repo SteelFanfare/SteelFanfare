@@ -39,6 +39,29 @@ public class Manager : MonoBehaviour {
 	void Update ()
     {
         slider.value = PNJDead;
+
+        if (PNJDead >= 10)
+        {
+            PNJDead = 0;
+
+            int i = caracControl.characters.Length;
+            while ( i > 0)
+            {
+                if (caracControl.characters[i-1].activeInHierarchy == false)
+                {
+                    i--;
+                }
+                else
+                {
+                    killCharacter(caracControl.characters[i - 1]);
+                    i = 0;
+                }
+                
+            }
+
+        }
+
+
         scoreText.text = "Score : " + score;
 
         #region Input Radios

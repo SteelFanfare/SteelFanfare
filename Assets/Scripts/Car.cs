@@ -21,7 +21,7 @@ public class Car : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.tag == "PNJ") {
-			Debug.Log ("Squish");
+			//Debug.Log ("Squish");
 
             other.gameObject.SendMessage("Squish");
 		}

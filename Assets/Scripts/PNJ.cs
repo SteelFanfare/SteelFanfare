@@ -136,7 +136,7 @@ public class PNJ : MonoBehaviour {
 
     void Squish()
     {
-        Debug.Log("mortInPNJ");
+        //Debug.Log("mortInPNJ");
 
         Invoke("Mort", 0.2f);
     }

@@ -22,7 +22,8 @@ public class Car : MonoBehaviour {
 	{
 		if (other.tag == "PNJ") {
 			Debug.Log ("Squish");
-			Destroy(other);
+
+            other.gameObject.SendMessage("Squish");
 		}
 	}
 }

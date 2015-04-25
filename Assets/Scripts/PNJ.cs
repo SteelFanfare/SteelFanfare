@@ -57,13 +57,15 @@ public class PNJ : MonoBehaviour {
             else if (manager.activeRadio == 2) //HipHop
             {
                 evangelisable = false;
-                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
                 transform.position = newPos;
             }
             else if (manager.activeRadio == 3) //NoRadio
             {
                 evangelisable = false;
-                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
                 transform.position = newPos;
             }
                 
@@ -73,7 +75,8 @@ public class PNJ : MonoBehaviour {
             if (manager.activeRadio == 0) //electro
             {
                 evangelisable = false;
-                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
                 transform.position = newPos;
             }
             else if (manager.activeRadio == 1) //rock
@@ -93,7 +96,8 @@ public class PNJ : MonoBehaviour {
             else if (manager.activeRadio == 3) //NoRadio
             {
                 evangelisable = false;
-                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
                 transform.position = newPos;
             }
         }
@@ -109,7 +113,8 @@ public class PNJ : MonoBehaviour {
             else if (manager.activeRadio == 1) //rock
             {
                 evangelisable = false;
-                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
                 transform.position = newPos;
             }
             else if (manager.activeRadio == 2) //HipHop
@@ -122,9 +127,24 @@ public class PNJ : MonoBehaviour {
             else if (manager.activeRadio == 3) //NoRadio
             {
                 evangelisable = false;
-                Vector3 newPos = transform.position - new Vector3(speed * delta, 0, 0);
+                m_rigid.velocity = Vector2.zero;
+                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
                 transform.position = newPos;
             }
         }
     }
+
+    void Squish()
+    {
+        Debug.Log("mortInPNJ");
+
+        Invoke("Mort", 0.2f);
+    }
+
+    void Mort()
+    {
+        manager.PNJDead++;
+        Destroy(transform.gameObject);
+    }
+
 }

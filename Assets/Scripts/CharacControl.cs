@@ -33,6 +33,7 @@ public class CharacControl : MonoBehaviour
         #endregion
 
 
+
         #region mouvement
         //on bouge le premier directement
         characters[0].transform.GetComponent<Rigidbody2D>().velocity = m_velocity * speed * delta; 

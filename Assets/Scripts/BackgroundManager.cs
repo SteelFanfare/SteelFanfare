@@ -8,14 +8,9 @@ public class BackgroundManager : MonoBehaviour {
 
     private float delta;
 
-    void Start()
-    {
-        backgrounds = GameObject.FindGameObjectsWithTag("Background");
-    }
-
-
 	void Update () 
     {
+        backgrounds = GameObject.FindGameObjectsWithTag("Background"); //car on peut rajouter des pnjs
         delta = Time.deltaTime;
 
         for (int i = 0; i < backgrounds.Length; i++)

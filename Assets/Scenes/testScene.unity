@@ -619,8 +619,8 @@ Transform:
   m_Children:
   - {fileID: 1468699692}
   - {fileID: 1199307683}
-  - {fileID: 89934445}
   - {fileID: 459818454}
+  - {fileID: 89934445}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1001 &418449960
@@ -660,7 +660,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 460852, guid: 7a9f3c3486c3d8840af4041b9f4927c9, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 121490, guid: 7a9f3c3486c3d8840af4041b9f4927c9, type: 2}
       propertyPath: m_Name
@@ -760,9 +760,9 @@ BoxCollider2D:
   m_GameObject: {fileID: 452471060}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .5, y: .5}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
 --- !u!1 &459818453 stripped
@@ -1513,7 +1513,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 460852, guid: 7a9f3c3486c3d8840af4041b9f4927c9, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 121490, guid: 7a9f3c3486c3d8840af4041b9f4927c9, type: 2}
       propertyPath: m_Name
@@ -2172,7 +2172,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: .5, y: .5}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
 --- !u!114 &1704236612
@@ -2219,7 +2219,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1704236609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 1, z: 0}
+  m_LocalPosition: {x: 3.43000007, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

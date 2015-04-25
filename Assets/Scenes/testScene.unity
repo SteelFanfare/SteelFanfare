@@ -965,6 +965,10 @@ Prefab:
       propertyPath: m_Name
       value: Personnage 0
       objectReference: {fileID: 0}
+    - target: {fileID: 21253128, guid: 7a9f3c3486c3d8840af4041b9f4927c9, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a9f3c3486c3d8840af4041b9f4927c9, type: 2}
   m_IsPrefabParent: 0

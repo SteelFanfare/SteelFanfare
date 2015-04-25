@@ -88,7 +88,7 @@ public class Manager : MonoBehaviour {
         #endregion
     }
 
-
+	// Kills a caracter
 	public void killCharacter(GameObject character)
 	{
 		lifes--;
@@ -99,5 +99,25 @@ public class Manager : MonoBehaviour {
 		}
 		
 		caracControl.characters [i].SetActive (false);
+	}
+
+	// Brings backa dead caracter
+	public void addCharacter(Vector2 position)
+	{
+		if (lifes >= 4) {
+			return;
+		}
+
+		int i = 0;
+		for (i = 0; i < caracControl.characters.Length; i++) {
+			if(caracControl.characters[i].activeInHierarchy == false) {
+				caracControl.characters[i].transform.position = position;
+				caracControl.characters[i].SetActive(true);
+				
+				lifes++;
+				
+				break;
+			}
+		}
 	}
 }

@@ -18,6 +18,7 @@ public class Effector : MonoBehaviour {
 
     void OnPlayerEnter(GameObject character)
     {
+		Debug.Log ("Contact kill");
 		manager.killCharacter (character);
     }
 }

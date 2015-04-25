@@ -8,7 +8,14 @@ public class PickupManager : MonoBehaviour {
 
 	private float progress = 0.0f;
 	private float recharge = 0.0f;
-	
+
+	private Manager manager;
+
+	void Awake () 
+	{
+		manager = GameObject.Find("_manager").GetComponent<Manager>();
+	}
+
 	// Update the progression when the player
 	void OnPlayerHover () 
 	{
@@ -27,7 +34,8 @@ public class PickupManager : MonoBehaviour {
 
 	void Complete()
 	{
-		this.gameObject.SetActive (false);
+		manager.addCharacter (this.GetComponent<Rigidbody2D>().position);
+		Destroy(this.gameObject);
 	}
 
 	// Limit the calls of playerHover

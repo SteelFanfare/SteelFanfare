@@ -6,6 +6,10 @@ public class Manager : MonoBehaviour {
 
     public int lifes;
     public int score;
+	public int pnjLife = 5;
+
+	private int pnjLifeCurrent;
+	private CharacControl caracControl;
 
     public enum radio
     {
@@ -17,12 +21,20 @@ public class Manager : MonoBehaviour {
     public int activeRadio;
     private GameObject textRadio;
 
+	private GameObject textPNJLife;
+
 	void Awake () 
     {
         //radio de base : pas de radio
         activeRadio = (int)radio.NoRadio;
         textRadio = GameObject.Find("TextRadio");
         textRadio.GetComponent<Text>().text = "radio : No-Radio";
+
+		caracControl = GameObject.Find("GroupeJoueur").GetComponent<CharacControl>();
+
+		pnjLifeCurrent = pnjLife;
+		textPNJLife = GameObject.Find("TextPNJLife");
+		textPNJLife.GetComponent<Text> ().text = "Asimov : " + pnjLifeCurrent.ToString ();
         
 	}
 	
@@ -52,4 +64,39 @@ public class Manager : MonoBehaviour {
         }
         #endregion
     }
+
+	void lostPnj()
+	{
+		pnjLifeCurrent--;
+
+		if (pnjLifeCurrent <= 0) {
+
+			GameObject lastCharacter = null;
+			foreach(GameObject character in caracControl.characters) {
+				if(character.activeInHierarchy) {
+					lastCharacter = character;
+				}
+			}
+
+			killCharacter(lastCharacter);
+
+			if(lifes > 0) {
+				pnjLifeCurrent = pnjLife;
+			}
+		}
+		
+		textPNJLife.GetComponent<Text> ().text = "Asimov : " + pnjLifeCurrent.ToString ();
+	}
+
+	public void killCharacter(GameObject character)
+	{
+		lifes--;
+		
+		int i = 0;
+		while (caracControl.characters[i].gameObject != character) {
+			i++;
+		}
+		
+		caracControl.characters [i].SetActive (false);
+	}
 }

@@ -6,7 +6,7 @@ public class CarSpawner : MonoBehaviour {
 	public float HautY = 2.50f;
 	public float BasY = -3.0f;
 	public int delay = 5;
-	public float carSpeed = 2;
+	public float carSpeed = 15;
 
 	public Rigidbody2D car;
 

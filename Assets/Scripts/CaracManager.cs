@@ -3,11 +3,10 @@ using System.Collections;
 
 public class CaracManager : MonoBehaviour {
 
-	void OnCollisionStay2D(Collision2D other)
+	void OnTriggerStay2D(Collider2D other)
 	{
-		Debug ("collision");
 		if (other.gameObject.tag == "Pick Up") {
-			other.gameObject.SendMessage ("OnPlayerHover");
+			other.gameObject.SendMessage ("OnPlayerHover", null, SendMessageOptions.DontRequireReceiver);
 		}
 	}
 
@@ -17,7 +16,4 @@ public class CaracManager : MonoBehaviour {
 			other.gameObject.SendMessage("OnPlayerEnter");
 		}
 	}
-
-
-
 }

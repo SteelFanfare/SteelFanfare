@@ -18,8 +18,6 @@ public class PickupManager : MonoBehaviour {
 
 		progress += progressSpeed * 100 * Time.deltaTime;
 
-		Debug.Log ("Pickup " + progress.ToString());
-		
 		recharge = hoverDelay;
 
 		if (progress >= 100.0f) {
@@ -29,15 +27,12 @@ public class PickupManager : MonoBehaviour {
 
 	void Complete()
 	{
-		Debug.Log ("Complete!");
-
 		this.gameObject.SetActive (false);
 	}
 
 	// Limit the calls of playerHover
 	void Update() {
 		if (recharge > 0.0f) {
-			//Debug.Log ("Recharge " + recharge.ToString());
 			recharge -= Time.deltaTime * 5;
 		}
 	}

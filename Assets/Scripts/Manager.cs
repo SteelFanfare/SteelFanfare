@@ -4,16 +4,47 @@ using System.Collections;
 public class Manager : MonoBehaviour {
 
     public int lifes;
+    private enum radio
+    {
+        Electro,
+        Musette,
+        Jazz,
+        NoRadio
+    }
+    public int activeRadio;
 
-
-
-	// Use this for initialization
-	void Start () {
-	
+	void Awake () 
+    {
+        //radio de base : pas de radio
+        activeRadio = (int)radio.NoRadio;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	void Update ()
+    {
+
+
+
+
+
+
+
+        #region Input Radios
+        if (Input.GetButton("A_manette"))
+        {
+            activeRadio = (int)radio.NoRadio;
+        }
+        else if (Input.GetButton("B_manette"))
+        {
+            activeRadio = (int)radio.Jazz;
+        }
+        else if (Input.GetButton("X_manette"))
+        {
+            activeRadio = (int)radio.Electro;
+        }
+        else if (Input.GetButton("Y_manette"))
+        {
+            activeRadio = (int)radio.Musette;
+        }
+        #endregion
+    }
 }

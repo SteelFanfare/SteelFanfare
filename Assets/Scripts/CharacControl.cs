@@ -48,4 +48,18 @@ public class CharacControl : MonoBehaviour
         #endregion
 
     }
+
+    public void LifeDelete(int characterNum)
+    {
+        characters[characterNum].SetActive(false);
+        
+    }
+
+    public void LifeAdd(int characterNum)
+    {
+        characters[characterNum].SetActive(true);
+    }
+
+
+
 }

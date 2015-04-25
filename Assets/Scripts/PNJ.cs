@@ -23,6 +23,8 @@ public class PNJ : MonoBehaviour {
     public bool evangelisable;
     private float delta;
 
+    public bool canHearMusic = false;
+
 	private bool dying = false;
 
     void Awake()
@@ -39,103 +41,110 @@ public class PNJ : MonoBehaviour {
         dir.Normalize();
 
 
-
-        if (PNJ_Status == PNJ_Type.Electro_FAN)
+        if (canHearMusic)
         {
-            if (manager.activeRadio == 0) //electro
+            if (PNJ_Status == PNJ_Type.Electro_FAN)
             {
-                //aime
-                evangelisable = true;
-                transform.tag = "PNJ";
-                m_rigid.velocity = -dir * speed * delta;
-            }
-            else  if (manager.activeRadio == 1) //rock
-            {
-                //aime pas
-                evangelisable = false;
-                transform.tag = "PNJ";
-                m_rigid.velocity = dir * speed * delta;
-            }
-            else if (manager.activeRadio == 2) //HipHop
-            {
-                evangelisable = false;
-                m_rigid.velocity = Vector2.zero;
-                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
-                transform.position = newPos;
-            }
-            else if (manager.activeRadio == 3) //NoRadio
-            {
-                evangelisable = false;
-                m_rigid.velocity = Vector2.zero;
-                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
-                transform.position = newPos;
-            }
+                if (manager.activeRadio == 0) //electro
+                {
+                    //aime
+                    evangelisable = true;
+                    transform.tag = "PNJ";
+                    m_rigid.velocity = -dir * speed * delta;
+                }
+                else  if (manager.activeRadio == 1) //rock
+                {
+                    //aime pas
+                    evangelisable = false;
+                    transform.tag = "PNJ";
+                    m_rigid.velocity = dir * speed * delta;
+                }
+                else if (manager.activeRadio == 2) //HipHop
+                {
+                    evangelisable = false;
+                    m_rigid.velocity = Vector2.zero;
+                    Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
+                    transform.position = newPos;
+                }
+                else if (manager.activeRadio == 3) //NoRadio
+                {
+                    evangelisable = false;
+                    m_rigid.velocity = Vector2.zero;
+                    Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
+                    transform.position = newPos;
+                }
                 
+            }
+            else if (PNJ_Status == PNJ_Type.Rock_FAN)
+            {
+                if (manager.activeRadio == 0) //electro
+                {
+                    evangelisable = false;
+                    m_rigid.velocity = Vector2.zero;
+                    Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
+                    transform.position = newPos;
+                }
+                else if (manager.activeRadio == 1) //rock
+                {
+                    //aime
+                    evangelisable = true;
+                    transform.tag = "PNJ";
+                    m_rigid.velocity = -dir * speed * delta;
+                }
+                else if (manager.activeRadio == 2) //HipHop
+                {
+                    evangelisable = false;
+                    //aime pas
+                    transform.tag = "PNJ";
+                    m_rigid.velocity = dir * speed * delta;
+                }
+                else if (manager.activeRadio == 3) //NoRadio
+                {
+                    evangelisable = false;
+                    m_rigid.velocity = Vector2.zero;
+                    Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
+                    transform.position = newPos;
+                }
+            }
+            else if (PNJ_Status == PNJ_Type.HipHop_FAN)
+            {
+                evangelisable = false;
+                if (manager.activeRadio == 0) //electro
+                {
+                    //aime pas
+                    transform.tag = "PNJ";
+                    m_rigid.velocity = dir * speed * delta;
+                }
+                else if (manager.activeRadio == 1) //rock
+                {
+                    evangelisable = false;
+                    m_rigid.velocity = Vector2.zero;
+                    Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
+                    transform.position = newPos;
+                }
+                else if (manager.activeRadio == 2) //HipHop
+                {
+                    //aime
+                    evangelisable = true;
+                    transform.tag = "PNJ";
+                    m_rigid.velocity = -dir * speed * delta;
+                }
+                else if (manager.activeRadio == 3) //NoRadio
+                {
+                    evangelisable = false;
+                    m_rigid.velocity = Vector2.zero;
+                    Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
+                    transform.position = newPos;
+                }
+            }
         }
-        else if (PNJ_Status == PNJ_Type.Rock_FAN)
+        else
         {
-            if (manager.activeRadio == 0) //electro
-            {
-                evangelisable = false;
-                m_rigid.velocity = Vector2.zero;
-                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
-                transform.position = newPos;
-            }
-            else if (manager.activeRadio == 1) //rock
-            {
-                //aime
-                evangelisable = true;
-                transform.tag = "PNJ";
-                m_rigid.velocity = -dir * speed * delta;
-            }
-            else if (manager.activeRadio == 2) //HipHop
-            {
-                evangelisable = false;
-                //aime pas
-                transform.tag = "PNJ";
-                m_rigid.velocity = dir * speed * delta;
-            }
-            else if (manager.activeRadio == 3) //NoRadio
-            {
-                evangelisable = false;
-                m_rigid.velocity = Vector2.zero;
-                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
-                transform.position = newPos;
-            }
-        }
-        else if (PNJ_Status == PNJ_Type.HipHop_FAN)
-        {
-            evangelisable = false;
-            if (manager.activeRadio == 0) //electro
-            {
-                //aime pas
-                transform.tag = "PNJ";
-                m_rigid.velocity = dir * speed * delta;
-            }
-            else if (manager.activeRadio == 1) //rock
-            {
-                evangelisable = false;
-                m_rigid.velocity = Vector2.zero;
-                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
-                transform.position = newPos;
-            }
-            else if (manager.activeRadio == 2) //HipHop
-            {
-                //aime
-                evangelisable = true;
-                transform.tag = "PNJ";
-                m_rigid.velocity = -dir * speed * delta;
-            }
-            else if (manager.activeRadio == 3) //NoRadio
-            {
-                evangelisable = false;
-                m_rigid.velocity = Vector2.zero;
-                Vector3 newPos = transform.position - new Vector3(delta, 0, 0);
-                transform.position = newPos;
-            }
+            m_rigid.velocity = Vector2.zero;
+            Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
+            transform.position = newPos;
         }
     }
-
     void Squish()
 	{
 		if (!dying) {

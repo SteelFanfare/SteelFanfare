@@ -23,6 +23,8 @@ public class PNJ : MonoBehaviour {
     public bool evangelisable;
     private float delta;
 
+	private bool dying = false;
+
     void Awake()
     {
         manager = GameObject.Find("_manager").GetComponent<Manager>();
@@ -135,16 +137,18 @@ public class PNJ : MonoBehaviour {
     }
 
     void Squish()
-    {
-        //Debug.Log("mortInPNJ");
+	{
+		if (!dying) {
+			dying = true;
 
-        Invoke("Mort", 0.2f);
+			Invoke ("Mort", 0.2f);
+		}
     }
 
     void Mort()
     {
-        manager.PNJDead++;
-        Destroy(transform.gameObject);
+		manager.PNJDead++;
+		Destroy (transform.gameObject);
     }
 
 }

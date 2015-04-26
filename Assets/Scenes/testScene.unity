@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Texture: {fileID: 2800000, guid: 28c0caa455133fe4e8ecf4a1bfe97304, type: 3}
   m_UVRect:
     serializedVersion: 2
@@ -2289,6 +2289,9 @@ MonoBehaviour:
   robot3: {fileID: 1378809304}
   robot4: {fileID: 495154958}
   GameOver: {fileID: 1616037133}
+  RockImg: {fileID: 2800000, guid: 8f067e634c85b91468d43ba3b700b840, type: 3}
+  ElectroImg: {fileID: 2800000, guid: 28c0caa455133fe4e8ecf4a1bfe97304, type: 3}
+  HipHopImg: {fileID: 2800000, guid: 39a8da49c2cac3f45b43866db0c56fd8, type: 3}
   activeRadio: 0
 --- !u!61 &1766222889
 BoxCollider2D:

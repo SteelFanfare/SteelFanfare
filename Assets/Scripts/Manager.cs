@@ -15,6 +15,7 @@ public class Manager : MonoBehaviour {
     public GameObject robot3;
     public GameObject robot4;
 
+	public GameObject GameOver;
 
 	private CharacControl caracControl;
 
@@ -41,7 +42,8 @@ public class Manager : MonoBehaviour {
         slider = GameObject.Find("Slider").GetComponent<Slider>();
         scoreText = GameObject.Find("TextScore").GetComponent<Text>();
 		caracControl = GameObject.Find("GroupeJoueur").GetComponent<CharacControl>();
-
+		
+		Time.timeScale = 1.0f;
 	}
 	
 	void Update ()
@@ -128,6 +130,11 @@ public class Manager : MonoBehaviour {
 		}
 		
 		caracControl.characters [i].SetActive (false);
+
+		if (lifes <= 0) {
+			GameOver.SetActive(true);
+			Time.timeScale = 0.0f;
+		}
 	}
 
 	// Brings backa dead caracter

@@ -7,6 +7,7 @@ public class Manager : MonoBehaviour {
     public int lifes;
     public int score;
     public int PNJDead;
+    public GameObject explosion;
 
 
     //oui c'est moche:
@@ -153,6 +154,7 @@ public class Manager : MonoBehaviour {
 	// Kills a caracter
 	public void killCharacter(GameObject character)
 	{
+        Instantiate(explosion, character.transform.position, Quaternion.identity);
 		lifes--;
 		
 		int i = 0;

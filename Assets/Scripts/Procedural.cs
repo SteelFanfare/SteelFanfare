@@ -18,12 +18,7 @@ public class Procedural : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Background")
-        {
-            Destroy(other.gameObject);
-        }
-
-        if (other.tag == "PNJ")
+        if (other.tag == "Background" || other.tag == "PNJ" || other.tag == "Effector" || other.tag == "PickUp")
         {
             Destroy(other.gameObject);
         }

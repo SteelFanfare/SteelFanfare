@@ -228,7 +228,7 @@ public class PNJ : MonoBehaviour {
         }
         else if (i == 2)
         {
-            Ticket_Object_HipHop.GetComponent<SpriteRenderer>().enabled = false;
+            Ticket_Object_HipHop.GetComponent<SpriteRenderer>().enabled = true;
             HipHop_Object.GetComponent<Animator>().SetTrigger("ticket");
         }
         else

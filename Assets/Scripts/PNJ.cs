@@ -18,6 +18,16 @@ public class PNJ : MonoBehaviour {
     private Rigidbody2D m_rigid;
     private GameObject leader;
 
+    #region vieux objets en public
+    public GameObject Electro_Object;
+    public GameObject Rock_Object;
+    public GameObject HipHop_Object;
+
+    public GameObject Ticket_Object_Electro;
+    public GameObject Ticket_Object_Rock;
+    public GameObject Ticket_Object_HipHop;
+    #endregion
+
     private Manager manager;
     public bool evangelisable;
     private float delta;
@@ -33,6 +43,32 @@ public class PNJ : MonoBehaviour {
         leader = GameObject.Find("GroupeJoueur").GetComponent<CharacControl>().characters[0];
     }
 
+    void Start()
+    {
+        Ticket_Object_Electro.GetComponent<SpriteRenderer>().enabled = false;
+        Ticket_Object_Rock.GetComponent<SpriteRenderer>().enabled = false;
+        Ticket_Object_HipHop.GetComponent<SpriteRenderer>().enabled = false;
+
+        if (PNJ_Status == PNJ_Type.Electro_FAN)
+        {
+            Electro_Object.SetActive(true);
+            Rock_Object.SetActive(false);
+            HipHop_Object.SetActive(false);
+        } 
+        else if(PNJ_Status == PNJ_Type.Rock_FAN)
+        {
+            Electro_Object.SetActive(false);
+            Rock_Object.SetActive(true);
+            HipHop_Object.SetActive(false);
+        }
+        else if (PNJ_Status == PNJ_Type.HipHop_FAN)
+        {
+            Electro_Object.SetActive(false);
+            Rock_Object.SetActive(false);
+            HipHop_Object.SetActive(true);
+        }
+    }
+
     void Update()
     {
         delta = Time.deltaTime;
@@ -42,9 +78,8 @@ public class PNJ : MonoBehaviour {
        
         Vector3 dir = transform.position - leader.transform.position;
         dir.Normalize();
-        
 
-
+        #region canHear
         if (canHearMusic)
         {
             if (PNJ_Status == PNJ_Type.Electro_FAN)
@@ -148,6 +183,8 @@ public class PNJ : MonoBehaviour {
             Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
             transform.position = newPos;
         }
+        #endregion
+
     }
     void Squish()
 	{
@@ -164,4 +201,16 @@ public class PNJ : MonoBehaviour {
 		Destroy (transform.gameObject);
     }
 
+
+    public void activation(int i)
+    {
+        if (i == 0)
+            Ticket_Object_Electro.GetComponent<SpriteRenderer>().enabled = true;
+        else if (i == 1)
+            Ticket_Object_Rock.GetComponent<SpriteRenderer>().enabled = true;
+        else if (i == 2)
+            Ticket_Object_HipHop.GetComponent<SpriteRenderer>().enabled = false;
+        else
+            Debug.Log("ERROR");
+    }
 }

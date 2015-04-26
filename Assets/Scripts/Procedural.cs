@@ -12,7 +12,7 @@ public class Procedural : MonoBehaviour {
 
     void Start()
     {
-        InvokeRepeating("spawnBloc", 0, 5.0f);
+        InvokeRepeating("spawnBloc", 0, 3.0f);
         InvokeRepeating("spawnBG", 0, 17.8f);
     }
 

@@ -8,6 +8,7 @@ public class CharacControl : MonoBehaviour
     public GameObject[] characters; //Array des musiciens (dynamique)
     public float speed;
     public float speedFollow;
+    public GameObject hand;
 
     public float invicibility;
     #endregion
@@ -85,6 +86,9 @@ public class CharacControl : MonoBehaviour
                 new Vector3(characters[i - 1].transform.position.x - 1.1f, characters[i - 1].transform.position.y, characters[i - 1].transform.position.z), ref velo, speedFollow);
             }
         }
+
+        hand.transform.position = characters[first].transform.position + new Vector3(0.5f, 0.7f, 0);
+
         #endregion
     }
 

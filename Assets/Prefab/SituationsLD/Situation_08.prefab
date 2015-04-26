@@ -11791,6 +11791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 0
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 117286}
   Rock_Object: {fileID: 168970}
   HipHop_Object: {fileID: 119712}
@@ -11811,6 +11812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 169176}
   Rock_Object: {fileID: 146566}
   HipHop_Object: {fileID: 158328}
@@ -11831,6 +11833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 2
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 194860}
   Rock_Object: {fileID: 124920}
   HipHop_Object: {fileID: 150728}
@@ -11851,6 +11854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 0
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 183098}
   Rock_Object: {fileID: 113580}
   HipHop_Object: {fileID: 100290}
@@ -11871,6 +11875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 122960}
   Rock_Object: {fileID: 154326}
   HipHop_Object: {fileID: 154088}
@@ -11891,6 +11896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 2
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 120572}
   Rock_Object: {fileID: 138308}
   HipHop_Object: {fileID: 132430}
@@ -11911,6 +11917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 2
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 145748}
   Rock_Object: {fileID: 193458}
   HipHop_Object: {fileID: 186792}
@@ -11931,6 +11938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 173342}
   Rock_Object: {fileID: 128568}
   HipHop_Object: {fileID: 181426}
@@ -11951,6 +11959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 0
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 186492}
   Rock_Object: {fileID: 119218}
   HipHop_Object: {fileID: 142404}
@@ -11971,6 +11980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 193866}
   Rock_Object: {fileID: 139620}
   HipHop_Object: {fileID: 106738}
@@ -11991,6 +12001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 2
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 127684}
   Rock_Object: {fileID: 120764}
   HipHop_Object: {fileID: 190670}
@@ -12011,6 +12022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 185390}
   Rock_Object: {fileID: 150900}
   HipHop_Object: {fileID: 164450}
@@ -12031,6 +12043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 0
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 192164}
   Rock_Object: {fileID: 163272}
   HipHop_Object: {fileID: 148346}

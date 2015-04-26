@@ -30,4 +30,9 @@ public class ButtonActions : MonoBehaviour {
 
 		Application.LoadLevel ("testScene");
 	}
+
+	public void quitGame()
+	{
+		Application.Quit ();
+	}
 }

@@ -418,7 +418,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 341429368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.13000011, y: .620000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1468699692}
@@ -1806,6 +1806,11 @@ MonoBehaviour:
   - {fileID: 172892, guid: 5e21578ca72887a4389146ce4f0b5069, type: 2}
   - {fileID: 161060, guid: 8987992aa02e1494f956c83827ee2cda, type: 2}
   - {fileID: 159466, guid: 24512d158c492054b90c285951e612d9, type: 2}
+  - {fileID: 106362, guid: 0cd5f13675d063b4f8992c23aec415d1, type: 2}
+  - {fileID: 105366, guid: 6beafbc48e9c4444ea51d4f7bf14a6d7, type: 2}
+  - {fileID: 175802, guid: 4f7a1b2c1c0dc0f499014b3d115dc42b, type: 2}
+  - {fileID: 114596, guid: fcb55d756f107c54c90a31e9c07794b4, type: 2}
+  - {fileID: 184914, guid: d11d5456a53232242b49859ea8d1c543, type: 2}
   background: {fileID: 134504, guid: b2107cbdd6465ff4d88a1651ca193a59, type: 2}
   spawnerBG: {fileID: 1865741429}
   spawnerSituations: {fileID: 89852806}

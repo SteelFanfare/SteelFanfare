@@ -88,6 +88,7 @@ public class CharacControl : MonoBehaviour
         }
 
         hand.transform.position = characters[first].transform.position + new Vector3(0.5f, 0.7f, 0);
+        //hand.transform.position = characters[first].transform.Find("body").transform.position + new Vector3(0.5f, 0.7f, 0);
 
         #endregion
     }

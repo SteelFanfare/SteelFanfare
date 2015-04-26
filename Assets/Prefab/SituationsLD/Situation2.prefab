@@ -871,7 +871,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 0
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11408354
@@ -886,7 +885,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11417872
@@ -901,7 +899,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 0
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11425786
@@ -916,7 +913,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11435150
@@ -953,7 +949,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 0
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11451768
@@ -968,7 +963,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11457322
@@ -983,7 +977,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11476604
@@ -1009,7 +1002,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11489078

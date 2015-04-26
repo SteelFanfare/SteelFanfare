@@ -17,7 +17,6 @@ public class PNJ : MonoBehaviour {
 
     private Rigidbody2D m_rigid;
     private GameObject leader;
-    public float speed;
 
     private Manager manager;
     public bool evangelisable;
@@ -37,8 +36,13 @@ public class PNJ : MonoBehaviour {
     void Update()
     {
         delta = Time.deltaTime;
+
+        leader = GameObject.Find("GroupeJoueur").GetComponent<CharacControl>().
+            characters[GameObject.Find("GroupeJoueur").GetComponent<CharacControl>().first];
+       
         Vector3 dir = transform.position - leader.transform.position;
         dir.Normalize();
+        
 
 
         if (canHearMusic)
@@ -50,14 +54,14 @@ public class PNJ : MonoBehaviour {
                     //aime
                     evangelisable = true;
                     transform.tag = "PNJ";
-                    m_rigid.velocity = -dir * speed * delta;
+                    m_rigid.velocity = -dir * 400 * delta;
                 }
                 else  if (manager.activeRadio == 1) //rock
                 {
                     //aime pas
                     evangelisable = false;
                     transform.tag = "PNJ";
-                    m_rigid.velocity = dir * speed * delta;
+                    m_rigid.velocity = dir * 100 * delta;
                 }
                 else if (manager.activeRadio == 2) //HipHop
                 {
@@ -89,14 +93,14 @@ public class PNJ : MonoBehaviour {
                     //aime
                     evangelisable = true;
                     transform.tag = "PNJ";
-                    m_rigid.velocity = -dir * speed * delta;
+                    m_rigid.velocity = -dir * 400 * delta;
                 }
                 else if (manager.activeRadio == 2) //HipHop
                 {
                     evangelisable = false;
                     //aime pas
                     transform.tag = "PNJ";
-                    m_rigid.velocity = dir * speed * delta;
+                    m_rigid.velocity = dir * 100 * delta;
                 }
                 else if (manager.activeRadio == 3) //NoRadio
                 {
@@ -113,7 +117,7 @@ public class PNJ : MonoBehaviour {
                 {
                     //aime pas
                     transform.tag = "PNJ";
-                    m_rigid.velocity = dir * speed * delta;
+                    m_rigid.velocity = dir * 100 * delta;
                 }
                 else if (manager.activeRadio == 1) //rock
                 {
@@ -127,7 +131,7 @@ public class PNJ : MonoBehaviour {
                     //aime
                     evangelisable = true;
                     transform.tag = "PNJ";
-                    m_rigid.velocity = -dir * speed * delta;
+                    m_rigid.velocity = -dir * 400 * delta;
                 }
                 else if (manager.activeRadio == 3) //NoRadio
                 {

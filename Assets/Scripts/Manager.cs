@@ -19,6 +19,10 @@ public class Manager : MonoBehaviour {
 
 	private CharacControl caracControl;
 
+	public Texture2D RockImg;
+	public Texture2D ElectroImg;
+	public Texture2D HipHopImg;
+
     public enum radio
     {
         Electro,
@@ -74,7 +78,8 @@ public class Manager : MonoBehaviour {
         #region Input Radios
         if (Input.GetButton("A_manette"))
         {
-            activeRadio = (int)radio.NoRadio;
+			activeRadio = (int)radio.NoRadio;
+			changeRadio(null);
 
             robot1.GetComponent<Robot1Behavior>().beat = 0;
             robot2.GetComponent<Robot1Behavior>().beat = 0;
@@ -84,7 +89,8 @@ public class Manager : MonoBehaviour {
         }
         else if (Input.GetButton("B_manette"))
         {
-            activeRadio = (int)radio.HipHop;
+			activeRadio = (int)radio.HipHop;
+			changeRadio(HipHopImg);
 
             robot1.GetComponent<Robot1Behavior>().beat = 1;
             robot2.GetComponent<Robot1Behavior>().beat = 1;
@@ -93,7 +99,8 @@ public class Manager : MonoBehaviour {
         }
         else if (Input.GetButton("X_manette"))
         {
-            activeRadio = (int)radio.Electro;
+			activeRadio = (int)radio.Electro;
+			changeRadio(ElectroImg);
 
             robot1.GetComponent<Robot1Behavior>().beat = 2;
             robot2.GetComponent<Robot1Behavior>().beat = 2;
@@ -103,6 +110,7 @@ public class Manager : MonoBehaviour {
         else if (Input.GetButton("Y_manette"))
         {
             activeRadio = (int)radio.Rock;
+			changeRadio(RockImg);
 
             robot1.GetComponent<Robot1Behavior>().beat = 3;
             robot2.GetComponent<Robot1Behavior>().beat = 3;
@@ -111,6 +119,19 @@ public class Manager : MonoBehaviour {
         }
         #endregion
     }
+
+	void changeRadio(Texture2D tex)
+	{
+		RawImage imageRadio = GameObject.Find ("CurrentRadio").GetComponent<RawImage> ();
+
+		if (tex == null) {
+			imageRadio.color = new Color (1, 1, 1, 0);
+			return;
+		}
+
+		imageRadio.texture = tex;
+		imageRadio.color = new Color (1, 1, 1, 1);
+	}
 
 	// Kills a caracter
 	public void killCharacter(GameObject character)
@@ -150,3 +171,4 @@ public class Manager : MonoBehaviour {
 		}
 	}
 }
+

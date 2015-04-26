@@ -40,8 +40,15 @@ public class PickupManager : MonoBehaviour {
 
 	// Limit the calls of playerHover
 	void Update() {
+        Vector3 newPos = transform.position - new Vector3(Time.deltaTime * 3, 0, 0);
+        transform.position = newPos;
+
+
+
 		if (recharge > 0.0f) {
 			recharge -= Time.deltaTime * 5;
+
+        
 		}
 	}
 }

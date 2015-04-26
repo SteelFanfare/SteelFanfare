@@ -1,0 +1,330 @@
+fileFormatVersion: 2
+guid: 21c783d1ecc9c914a9dc97ce6ead63cb
+timeCreated: 1430043598
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bloodground_#[600,400]_0
+    21300002: bloodground_#[600,400]_1
+    21300004: bloodground_#[600,400]_2
+    21300006: bloodground_#[600,400]_3
+    21300008: bloodground_#[600,400]_4
+    21300010: bloodground_#[600,400]_5
+    21300012: bloodground_#[600,400]_6
+    21300014: bloodground_#[600,400]_7
+    21300016: bloodground_#[600,400]_8
+    21300018: bloodground_#[600,400]_9
+    21300020: bloodground_#[600,400]_10
+    21300022: bloodground_#[600,400]_11
+    21300024: bloodground_#[600,400]_12
+    21300026: bloodground_#[600,400]_13
+    21300028: bloodground_#[600,400]_14
+    21300030: bloodground_#[600,400]_15
+    21300032: bloodground_#[600,400]_16
+    21300034: bloodground_#[600,400]_17
+    21300036: bloodground_#[600,400]_18
+    21300038: bloodground_#[600,400]_19
+    21300040: bloodground_#[600,400]_20
+    21300042: bloodground_#[600,400]_21
+    21300044: bloodground_#[600,400]_22
+    21300046: bloodground_#[600,400]_23
+    21300048: bloodground_#[600,400]_24
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: bloodground_#[600,400]_0
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 1786
+        width: 121
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_1
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 1784
+        width: 134
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_2
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1780
+        width: 154
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_3
+      rect:
+        serializedVersion: 2
+        x: 2022
+        y: 1776
+        width: 175
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_4
+      rect:
+        serializedVersion: 2
+        x: 2611
+        y: 1771
+        width: 198
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1366
+        width: 220
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_6
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1363
+        width: 241
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_7
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 1359
+        width: 262
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_8
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 1355
+        width: 281
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_9
+      rect:
+        serializedVersion: 2
+        x: 2558
+        y: 1352
+        width: 301
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_10
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 947
+        width: 317
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_11
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 944
+        width: 334
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_12
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 941
+        width: 350
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_13
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 940
+        width: 363
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_14
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 937
+        width: 377
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_15
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 534
+        width: 387
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_16
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 533
+        width: 399
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_17
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 531
+        width: 408
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_18
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 528
+        width: 418
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_19
+      rect:
+        serializedVersion: 2
+        x: 2495
+        y: 528
+        width: 425
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_20
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 127
+        width: 431
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_21
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 125
+        width: 437
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_22
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 125
+        width: 440
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_23
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 124
+        width: 444
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloodground_#[600,400]_24
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 124
+        width: 445
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

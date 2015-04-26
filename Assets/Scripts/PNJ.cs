@@ -36,11 +36,14 @@ public class PNJ : MonoBehaviour {
 
 	private bool dying = false;
 
+	private ObjectHolder ObjectHolder;
+
     void Awake()
     {
         manager = GameObject.Find("_manager").GetComponent<Manager>();
         m_rigid = transform.GetComponent<Rigidbody2D>();
         leader = GameObject.Find("GroupeJoueur").GetComponent<CharacControl>().characters[0];
+		ObjectHolder = GameObject.Find("_manager").GetComponent<ObjectHolder>();
     }
 
     void Start()
@@ -202,6 +205,7 @@ public class PNJ : MonoBehaviour {
 	{
 		if (!dying) {
 			dying = true;
+			Instantiate (ObjectHolder.BloodImpact, transform.position, Quaternion.identity);
 
 			Invoke ("Mort", 0.2f);
 		}
@@ -210,6 +214,9 @@ public class PNJ : MonoBehaviour {
     void Mort()
     {
 		manager.PNJDead++;
+
+		GameObject newBlood = (GameObject)Instantiate (ObjectHolder.Blood, transform.position, Quaternion.identity);
+		newBlood.transform.localScale = new Vector2 (0.5f, 0.5f);
 		Destroy (transform.gameObject);
     }
 

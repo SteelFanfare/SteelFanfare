@@ -174,7 +174,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!1 &89934441 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 121490, guid: 7a9f3c3486c3d8840af4041b9f4927c9, type: 2}
@@ -1555,7 +1555,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 416078, guid: b2107cbdd6465ff4d88a1651ca193a59, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2107cbdd6465ff4d88a1651ca193a59, type: 2}
@@ -1935,6 +1935,7 @@ MonoBehaviour:
   - {fileID: 175802, guid: 4f7a1b2c1c0dc0f499014b3d115dc42b, type: 2}
   - {fileID: 114596, guid: fcb55d756f107c54c90a31e9c07794b4, type: 2}
   - {fileID: 184914, guid: d11d5456a53232242b49859ea8d1c543, type: 2}
+  - {fileID: 142164, guid: 8bd0ca1be9989d74fbf83eea69a33fb4, type: 2}
   background: {fileID: 134504, guid: b2107cbdd6465ff4d88a1651ca193a59, type: 2}
   spawnerBG: {fileID: 1865741429}
   spawnerSituations: {fileID: 89852806}

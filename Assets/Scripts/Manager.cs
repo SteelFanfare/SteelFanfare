@@ -73,50 +73,33 @@ public class Manager : MonoBehaviour {
 
         }
 
-
-        scoreText.text = "Score : " + score;
+        scoreText.text = "x " + score;
 
         #region Input Radios
         if (Input.GetButton("A_manette"))
         {
 			activeRadio = (int)radio.NoRadio;
 			changeRadio(NoRadioImg);
-
-            robot1.GetComponent<Robot1Behavior>().beat = 0;
-            robot2.GetComponent<Robot1Behavior>().beat = 0;
-            robot3.GetComponent<Robot1Behavior>().beat = 0;
-            robot4.GetComponent<Robot1Behavior>().beat = 0;
+			setRobotBehavior(0);
             
         }
         else if (Input.GetButton("B_manette"))
         {
 			activeRadio = (int)radio.HipHop;
 			changeRadio(HipHopImg);
-
-            robot1.GetComponent<Robot1Behavior>().beat = 1;
-            robot2.GetComponent<Robot1Behavior>().beat = 1;
-            robot3.GetComponent<Robot1Behavior>().beat = 1;
-            robot4.GetComponent<Robot1Behavior>().beat = 1;
+			setRobotBehavior(1);
         }
         else if (Input.GetButton("X_manette"))
         {
 			activeRadio = (int)radio.Electro;
 			changeRadio(ElectroImg);
-
-            robot1.GetComponent<Robot1Behavior>().beat = 2;
-            robot2.GetComponent<Robot1Behavior>().beat = 2;
-            robot3.GetComponent<Robot1Behavior>().beat = 2;
-            robot4.GetComponent<Robot1Behavior>().beat = 2;
+			setRobotBehavior(2);
         }
         else if (Input.GetButton("Y_manette"))
         {
             activeRadio = (int)radio.Rock;
 			changeRadio(RockImg);
-
-            robot1.GetComponent<Robot1Behavior>().beat = 3;
-            robot2.GetComponent<Robot1Behavior>().beat = 3;
-            robot3.GetComponent<Robot1Behavior>().beat = 3;
-            robot4.GetComponent<Robot1Behavior>().beat = 3;
+			setRobotBehavior(3);
         }
         #endregion
     }
@@ -125,6 +108,13 @@ public class Manager : MonoBehaviour {
 	{
 		RawImage imageRadio = GameObject.Find ("CurrentRadio").GetComponent<RawImage> ();
 		imageRadio.texture = tex;
+	}
+
+	public void setRobotBehavior(int beatNumber) {
+		robot1.GetComponent<Robot1Behavior>().beat = beatNumber;
+		robot2.GetComponent<Robot1Behavior>().beat = beatNumber;
+		robot3.GetComponent<Robot1Behavior>().beat = beatNumber;
+		robot4.GetComponent<Robot1Behavior>().beat = beatNumber;
 	}
 
 	// Kills a caracter
@@ -159,7 +149,26 @@ public class Manager : MonoBehaviour {
 				caracControl.characters[i].SetActive(true);
 				
 				lifes++;
-				
+				Debug.Log (activeRadio);
+
+				switch(activeRadio) {
+					case (int)radio.NoRadio :
+						setRobotBehavior(0);
+						break;
+
+					case (int)radio.Electro :
+						setRobotBehavior(2);
+						break;
+
+					case (int)radio.Rock :
+						setRobotBehavior(3);
+						break;
+
+					case (int)radio.HipHop :
+						setRobotBehavior(1);
+						break;
+				}
+
 				break;
 			}
 		}

@@ -29,8 +29,6 @@ public class PickupManager : MonoBehaviour {
 
 		if (progress >= 100.0f) {
 			Complete ();
-		} else {
-			UpdateProgressionBar ();
 		}
 	}
 

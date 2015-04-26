@@ -42,8 +42,8 @@ GameObject:
   - 212: {fileID: 21297446}
   - 95: {fileID: 9544962}
   - 61: {fileID: 6188460}
-  - 114: {fileID: 11458368}
   - 50: {fileID: 5019526}
+  - 114: {fileID: 11458368}
   m_Layer: 0
   m_Name: collectible_1
   m_TagString: Pick Up

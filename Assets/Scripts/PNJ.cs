@@ -214,6 +214,9 @@ public class PNJ : MonoBehaviour {
 			Instantiate (ObjectHolder.BloodImpact, transform.position, Quaternion.identity);
 
 			Invoke ("Mort", 0.2f);
+
+			AudioSource audio = GameObject.Find ("EventSounds").GetComponent<AudioSource>();
+			audio.Play();
 		}
     }
 

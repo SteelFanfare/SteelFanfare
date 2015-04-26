@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 447198}
   - 212: {fileID: 21207066}
   - 95: {fileID: 9557574}
+  - 114: {fileID: 11494444}
   m_Layer: 9
   m_Name: Blood
   m_TagString: Untagged
@@ -46,6 +47,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11494444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd030c196ddb9343ba898864ccc69d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21207066
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -68,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -725673835
+  m_SortingLayerID: -1109894807
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 21c783d1ecc9c914a9dc97ce6ead63cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

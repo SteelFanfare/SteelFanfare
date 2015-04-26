@@ -22,6 +22,7 @@ public class Manager : MonoBehaviour {
 	public Texture2D RockImg;
 	public Texture2D ElectroImg;
 	public Texture2D HipHopImg;
+	public Texture2D NoRadioImg;
 
     public enum radio
     {
@@ -79,7 +80,7 @@ public class Manager : MonoBehaviour {
         if (Input.GetButton("A_manette"))
         {
 			activeRadio = (int)radio.NoRadio;
-			changeRadio(null);
+			changeRadio(NoRadioImg);
 
             robot1.GetComponent<Robot1Behavior>().beat = 0;
             robot2.GetComponent<Robot1Behavior>().beat = 0;
@@ -123,14 +124,7 @@ public class Manager : MonoBehaviour {
 	void changeRadio(Texture2D tex)
 	{
 		RawImage imageRadio = GameObject.Find ("CurrentRadio").GetComponent<RawImage> ();
-
-		if (tex == null) {
-			imageRadio.color = new Color (1, 1, 1, 0);
-			return;
-		}
-
 		imageRadio.texture = tex;
-		imageRadio.color = new Color (1, 1, 1, 1);
 	}
 
 	// Kills a caracter

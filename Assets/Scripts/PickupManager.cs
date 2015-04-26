@@ -29,6 +29,8 @@ public class PickupManager : MonoBehaviour {
 
 		if (progress >= 100.0f) {
 			Complete ();
+		} else {
+			UpdateProgressionBar ();
 		}
 	}
 
@@ -43,12 +45,19 @@ public class PickupManager : MonoBehaviour {
         Vector3 newPos = transform.position - new Vector3(Time.deltaTime * 3, 0, 0);
         transform.position = newPos;
 
-
-
 		if (recharge > 0.0f) {
 			recharge -= Time.deltaTime * 5;
-
-        
 		}
+	}
+
+	// Scales the progression
+	void UpdateProgressionBar() {
+		Transform progressionBar = this.transform.Find("ProgressionHolder");
+		float scale = progress * 0.01f;
+
+		Debug.Log (progress);
+
+
+		progressionBar.localScale = new Vector3 (1.0f, scale, 1.0f);
 	}
 }

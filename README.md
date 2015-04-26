@@ -1,16 +1,21 @@
 # SteelFanfare
 
+
 A musical game created in 48h for the RythmJam 2015 about tastes, robots and traffic.
 
 ## The team
+
+![The team](team.png "The team")
 
 - Pierre Vandermaesen: Game Design / Sound Design
 - Guillaume Olivetti: Development
 - David Birgé-Cotte: Game Design / Development
 - Jonathan Giroux: Animation
-- Adrien Jouannet: Game Design / Grapics
+- Adrien Jouannet: Game Design / Graphics
 
 ## How to play
+
+![Gameplay screenshot](gameplay.png "Gameplay")
 
 You must gather as many people as possible for your future concert. Your robots will bring flyers to your fans, but for this they will have to play the right radio station to attract them.
 
@@ -31,5 +36,5 @@ In the end you will see your score and the total casualties caused by your marke
 ## License
 
 The game is released under CC BY-NC-SA 4.0 which can be found in the following links:
-http://creativecommons.org/licenses/by-nc-sa/4.0/
-http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+- http://creativecommons.org/licenses/by-nc-sa/4.0/
+- http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode

@@ -56,11 +56,9 @@ public class Manager : MonoBehaviour {
 	
 	void Update ()
     {
-
-
-
-
-
+		if (lifes <= 0) {
+			return;
+		}
 
         slider.value = PNJDead;
 
@@ -178,6 +176,8 @@ public class Manager : MonoBehaviour {
 			GameObject.Find ("CountRock").GetComponent<Text> ().text = deadRock.ToString();
 
 			Time.timeScale = 0.0f;
+
+			GameObject.Find ("RetryButton").GetComponent<Button> ().Select();
 		}
 	}
 

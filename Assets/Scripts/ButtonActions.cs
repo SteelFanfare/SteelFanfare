@@ -15,6 +15,7 @@ public class ButtonActions : MonoBehaviour {
 
 	public void goTitle()
 	{
+		Time.timeScale = 1.0f;
 		Application.LoadLevel ("titre");
 	}
 

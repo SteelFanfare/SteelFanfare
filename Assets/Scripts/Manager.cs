@@ -27,7 +27,6 @@ public class Manager : MonoBehaviour {
         NoRadio
     }
     public int activeRadio;
-    private Text textRadio;
     private Slider slider;
     private Text scoreText;
 
@@ -37,8 +36,6 @@ public class Manager : MonoBehaviour {
     {
         //radio de base : pas de radio
         activeRadio = (int)radio.NoRadio;
-        textRadio = GameObject.Find("TextRadio").GetComponent<Text>();
-        textRadio.text = "radio : No-Radio";
         slider = GameObject.Find("Slider").GetComponent<Slider>();
         scoreText = GameObject.Find("TextScore").GetComponent<Text>();
 		caracControl = GameObject.Find("GroupeJoueur").GetComponent<CharacControl>();
@@ -78,7 +75,6 @@ public class Manager : MonoBehaviour {
         if (Input.GetButton("A_manette"))
         {
             activeRadio = (int)radio.NoRadio;
-            textRadio.text = "radio : No-Radio";
 
             robot1.GetComponent<Robot1Behavior>().beat = 0;
             robot2.GetComponent<Robot1Behavior>().beat = 0;
@@ -89,7 +85,6 @@ public class Manager : MonoBehaviour {
         else if (Input.GetButton("B_manette"))
         {
             activeRadio = (int)radio.HipHop;
-            textRadio.text = "radio : HipHop";
 
             robot1.GetComponent<Robot1Behavior>().beat = 1;
             robot2.GetComponent<Robot1Behavior>().beat = 1;
@@ -99,7 +94,6 @@ public class Manager : MonoBehaviour {
         else if (Input.GetButton("X_manette"))
         {
             activeRadio = (int)radio.Electro;
-            textRadio.text = "radio : Electro";
 
             robot1.GetComponent<Robot1Behavior>().beat = 2;
             robot2.GetComponent<Robot1Behavior>().beat = 2;
@@ -109,7 +103,6 @@ public class Manager : MonoBehaviour {
         else if (Input.GetButton("Y_manette"))
         {
             activeRadio = (int)radio.Rock;
-            textRadio.text = "radio : Rock";
 
             robot1.GetComponent<Robot1Behavior>().beat = 3;
             robot2.GetComponent<Robot1Behavior>().beat = 3;

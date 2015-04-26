@@ -80,7 +80,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 7cd980fd2d08f904bb41fb1fe9615f7e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 27cfcfa4162b9dc448d6c23077afcd32, type: 2}
   m_Tag: 
 --- !u!1102 &110273632
 AnimatorState:
@@ -97,7 +97,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 662779b52c4f20c4db734b286687d97c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 32a71d11093967c46adcaad42fbc2c0a, type: 2}
   m_Tag: 
 --- !u!1107 &110705208
 AnimatorStateMachine:
@@ -109,7 +109,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 110215328}
-    m_Position: {x: 264, y: 120, z: 0}
+    m_Position: {x: 276, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

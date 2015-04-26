@@ -57,18 +57,24 @@ public class PNJ : MonoBehaviour {
             Electro_Object.SetActive(true);
             Rock_Object.SetActive(false);
             HipHop_Object.SetActive(false);
+
+            transform.GetComponentInChildren<Animator>().speed = 107f / 60f;
         } 
         else if(PNJ_Status == PNJ_Type.Rock_FAN)
         {
             Electro_Object.SetActive(false);
             Rock_Object.SetActive(true);
             HipHop_Object.SetActive(false);
+
+            transform.GetComponentInChildren<Animator>().speed = 2;
         }
         else if (PNJ_Status == PNJ_Type.HipHop_FAN)
         {
             Electro_Object.SetActive(false);
             Rock_Object.SetActive(false);
             HipHop_Object.SetActive(true);
+
+            transform.GetComponentInChildren<Animator>().speed = 104f / 60f;
         }
     }
 

@@ -62,7 +62,7 @@ public class Manager : MonoBehaviour {
 
         slider.value = PNJDead;
 
-        if (PNJDead >= 10)
+        if (PNJDead >= 7)
         {
             PNJDead = 0;
 

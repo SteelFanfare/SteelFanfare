@@ -135,13 +135,19 @@ public class Manager : MonoBehaviour {
 		}
 	}
 
-	// Brings backa dead caracter
-	public void addCharacter(Vector2 position)
+	// Brings back a dead caracter
+	public void addCharacter()
 	{
 		if (lifes >= 4) {
 			return;
 		}
 
+		// Getting the leading robot to figure its positions
+		CharacControl controller = GameObject.Find("GroupeJoueur").GetComponent<CharacControl>();
+		int leaderKey = controller.GetLeaderKey ();
+		Vector2 position = caracControl.characters [leaderKey].transform.position;
+
+		// Searching for a dead robot
 		int i = 0;
 		for (i = 0; i < caracControl.characters.Length; i++) {
 			if(caracControl.characters[i].activeInHierarchy == false) {

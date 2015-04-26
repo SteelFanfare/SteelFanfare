@@ -28,7 +28,7 @@ public class CharacControl : MonoBehaviour
         first = 0;
     }
 
-	int GetLeaderKey()
+	public int GetLeaderKey()
 	{
 		#region test Leader
 		if (characters[0].activeInHierarchy == true)

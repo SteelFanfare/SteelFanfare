@@ -16,7 +16,7 @@ public class PickupManager : MonoBehaviour {
 		manager = GameObject.Find("_manager").GetComponent<Manager>();
 	}
 
-	// Update the progression when the player
+	// Update the progression when the player hovers the collectuble
 	void OnPlayerHover () 
 	{
 		if (recharge > 0.0f) {
@@ -34,7 +34,7 @@ public class PickupManager : MonoBehaviour {
 
 	void Complete()
 	{
-		manager.addCharacter (this.GetComponent<Rigidbody2D>().position);
+		manager.addCharacter ();
 		Destroy(this.gameObject);
 	}
 

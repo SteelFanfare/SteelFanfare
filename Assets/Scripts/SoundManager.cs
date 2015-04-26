@@ -124,10 +124,12 @@ public class SoundManager : MonoBehaviour {
             {
                 Bass.volume = 0;
             }
+
             if (CharacterControl.characters[2].active == false)
             {
                 Lead.volume = 0;
             }
+
             if (CharacterControl.characters[3].active == false)
             {
                 Pad.volume = 0;

@@ -140,6 +140,7 @@ public class Manager : MonoBehaviour {
 	{
 		RawImage imageRadio = GameObject.Find ("CurrentRadio").GetComponent<RawImage> ();
 		imageRadio.texture = tex;
+		GameObject.Find ("RadioNoise").GetComponent<AudioSource> ().Play ();
 	}
 
 	public void setRobotBehavior(int beatNumber) {
@@ -160,6 +161,8 @@ public class Manager : MonoBehaviour {
 		}
 		
 		caracControl.characters [i].SetActive (false);
+		GameObject.Find ("ImpactRobotSound").GetComponent<AudioSource> ().Play ();
+
 
 		deadRobot++;
 
@@ -219,6 +222,8 @@ public class Manager : MonoBehaviour {
 				break;
 			}
 		}
+		
+		GameObject.Find ("PickUpLife").GetComponent<AudioSource> ().Play ();
 	}
 }
 

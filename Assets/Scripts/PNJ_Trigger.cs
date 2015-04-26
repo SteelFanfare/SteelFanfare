@@ -30,6 +30,8 @@ public class PNJ_Trigger : MonoBehaviour {
                 other.transform.GetComponent<Collider2D>().isTrigger = true;
                 other.transform.tag = "Background";
                 other.transform.gameObject.layer = 9;
+
+				GameObject.Find ("PickUpSound").GetComponent<AudioSource>().Play();
             }
         }
     }

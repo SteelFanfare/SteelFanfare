@@ -214,6 +214,13 @@ public class PNJ : MonoBehaviour {
     void Mort()
     {
 		manager.PNJDead++;
+		if (PNJ_Status == PNJ_Type.HipHop_FAN) {
+			manager.deadHipHop++;
+		} else if (PNJ_Status == PNJ_Type.Electro_FAN) {
+			manager.deadElectro++;
+		} else if (PNJ_Status == PNJ_Type.Rock_FAN) {
+			manager.deadRock++;
+		}
 
 		GameObject newBlood = (GameObject)Instantiate (ObjectHolder.Blood, transform.position, Quaternion.identity);
 		newBlood.transform.localScale = new Vector2 (0.5f, 0.5f);

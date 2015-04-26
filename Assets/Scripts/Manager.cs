@@ -23,6 +23,11 @@ public class Manager : MonoBehaviour {
 	public Texture2D ElectroImg;
 	public Texture2D HipHopImg;
 	public Texture2D NoRadioImg;
+	
+	public int deadRobot = 0;
+	public int deadElectro = 0;
+	public int deadHipHop = 0;
+	public int deadRock = 0;
 
     public enum radio
     {
@@ -129,8 +134,17 @@ public class Manager : MonoBehaviour {
 		
 		caracControl.characters [i].SetActive (false);
 
+		deadRobot++;
+
 		if (lifes <= 0) {
 			GameOver.SetActive(true);
+
+			GameObject.Find ("FinalScore").GetComponent<Text> ().text = score.ToString();
+			GameObject.Find ("CountRobot").GetComponent<Text> ().text = deadRobot.ToString();
+			GameObject.Find ("CountElectro").GetComponent<Text> ().text = deadElectro.ToString();
+			GameObject.Find ("CountHipHop").GetComponent<Text> ().text = deadHipHop.ToString();
+			GameObject.Find ("CountRock").GetComponent<Text> ().text = deadRock.ToString();
+
 			Time.timeScale = 0.0f;
 		}
 	}

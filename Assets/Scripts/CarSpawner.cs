@@ -8,7 +8,8 @@ public class CarSpawner : MonoBehaviour {
 	public int delay = 5;
 	public float carSpeed = 15;
 
-	public Rigidbody2D car;
+	public Rigidbody2D[] cars;
+    private int rand;
 
 	private float recharge;
 
@@ -26,6 +27,9 @@ public class CarSpawner : MonoBehaviour {
 	}
 
 	void SpawnCar() {
+
+        rand = Random.Range(0, cars.Length);
+
 		bool isHaut = Random.value > 0.5f;
 
 		Vector3 position = new Vector3 (
@@ -33,16 +37,16 @@ public class CarSpawner : MonoBehaviour {
 			isHaut ? HautY : BasY
 		);
 		
-		Quaternion orientation = new Quaternion (
-			0,
-			0,
-			isHaut ? -180 : 0,
-			0
-		);
+		
 
 		float speed = isHaut ? -carSpeed : carSpeed;
 
-		Rigidbody2D newCar = (Rigidbody2D)Instantiate (car, position, orientation);
+		Rigidbody2D newCar = (Rigidbody2D)Instantiate (cars[rand], position, Quaternion.identity);
+
+        if (isHaut)
+        {
+            newCar.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+        }
 		newCar.velocity = new Vector2(speed, 0);
 	}
 }

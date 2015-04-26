@@ -706,7 +706,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11457192
@@ -754,7 +753,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11473802
@@ -780,7 +778,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11479214
@@ -795,7 +792,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 1
-  speed: 100
   evangelisable: 0
   canHearMusic: 0
 --- !u!114 &11496732

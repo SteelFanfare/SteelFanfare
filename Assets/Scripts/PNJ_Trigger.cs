@@ -14,7 +14,7 @@ public class PNJ_Trigger : MonoBehaviour {
 	}
 
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.transform.tag == "PNJ")
         {

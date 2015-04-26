@@ -85,8 +85,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 0
-  speed: 100
+  speed: 300
   evangelisable: 0
+  canHearMusic: 0
 --- !u!212 &21245882
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -18,7 +18,7 @@ public class CharacControl : MonoBehaviour
     private Vector3 velo;
 
 
-    private int first;
+    public int first;
     #endregion
 
     void Awake()

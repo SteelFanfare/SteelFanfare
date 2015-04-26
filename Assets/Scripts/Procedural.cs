@@ -13,7 +13,7 @@ public class Procedural : MonoBehaviour {
     void Start()
     {
         InvokeRepeating("spawnBloc", 0, 5.0f);
-        InvokeRepeating("spawnBG", 0, 8.95f);
+        InvokeRepeating("spawnBG", 0, 17.8f);
     }
 
     void OnTriggerExit2D(Collider2D other)

@@ -50,6 +50,12 @@ public class Manager : MonoBehaviour {
 	
 	void Update ()
     {
+
+
+
+
+
+
         slider.value = PNJDead;
 
         if (PNJDead >= 10)
@@ -81,6 +87,12 @@ public class Manager : MonoBehaviour {
 			activeRadio = (int)radio.NoRadio;
 			changeRadio(NoRadioImg);
 			setRobotBehavior(0);
+
+            robot1.GetComponent<Animator>().speed = 1;
+            robot2.GetComponent<Animator>().speed = 1;
+            robot3.GetComponent<Animator>().speed = 1;
+            robot4.GetComponent<Animator>().speed = 1;
+
             
         }
         else if (Input.GetButton("B_manette"))
@@ -88,18 +100,33 @@ public class Manager : MonoBehaviour {
 			activeRadio = (int)radio.HipHop;
 			changeRadio(HipHopImg);
 			setRobotBehavior(1);
+
+            robot1.GetComponent<Animator>().speed = 104f/60f;
+            robot2.GetComponent<Animator>().speed = 104f / 60f;
+            robot3.GetComponent<Animator>().speed = 104f / 60f;
+            robot4.GetComponent<Animator>().speed = 104f / 60f;
         }
         else if (Input.GetButton("X_manette"))
         {
 			activeRadio = (int)radio.Electro;
 			changeRadio(ElectroImg);
 			setRobotBehavior(2);
+
+            robot1.GetComponent<Animator>().speed = 107f/60f;
+            robot2.GetComponent<Animator>().speed = 107f / 60f;
+            robot3.GetComponent<Animator>().speed = 107f / 60f;
+            robot4.GetComponent<Animator>().speed = 107f / 60f;
         }
         else if (Input.GetButton("Y_manette"))
         {
             activeRadio = (int)radio.Rock;
 			changeRadio(RockImg);
 			setRobotBehavior(3);
+
+            robot1.GetComponent<Animator>().speed = 2;
+            robot2.GetComponent<Animator>().speed = 2;
+            robot3.GetComponent<Animator>().speed = 2;
+            robot4.GetComponent<Animator>().speed = 2;
         }
         #endregion
     }

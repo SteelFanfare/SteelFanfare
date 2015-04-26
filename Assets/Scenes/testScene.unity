@@ -2349,7 +2349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -3001,6 +3001,7 @@ MonoBehaviour:
   lifes: 4
   score: 0
   PNJDead: 0
+  explosion: {fileID: 119760, guid: d25f622787a93e3489cac73702b6853c, type: 2}
   robot1: {fileID: 553498890}
   robot2: {fileID: 979217606}
   robot3: {fileID: 1638819067}

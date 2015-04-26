@@ -20,6 +20,7 @@ public class SoundManager : MonoBehaviour {
 
     private Manager manager;
     private int radioManager;
+    private CharacControl CharacterControl;
 
     private AudioSource Drum;
     private AudioSource Bass;
@@ -29,73 +30,112 @@ public class SoundManager : MonoBehaviour {
     void Awake()
     {
         manager = GameObject.Find("_manager").GetComponent<Manager>();
+        CharacterControl = GameObject.Find("GroupeJoueur").GetComponent<CharacControl>();
 
-        Drum = GameObject.Find("Personnage 0").GetComponent<AudioSource>();
-        Bass = GameObject.Find("Personnage 1").GetComponent<AudioSource>();
-        Lead = GameObject.Find("Personnage 2").GetComponent<AudioSource>();
-        Pad = GameObject.Find("Personnage 3").GetComponent<AudioSource>();
+        Drum = GameObject.Find("SoundRobot_1").GetComponent<AudioSource>();
+        Bass = GameObject.Find("SoundRobot_2").GetComponent<AudioSource>();
+        Lead = GameObject.Find("SoundRobot_3").GetComponent<AudioSource>();
+        Pad = GameObject.Find("SoundRobot_4").GetComponent<AudioSource>();
     }
 
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
 
-        if (radioManager != manager.activeRadio)
-        {
-            radioManager = manager.activeRadio;
-
-            if (manager.activeRadio == 0)
+            if (radioManager != manager.activeRadio)
             {
-                Drum.clip = Electro_D;
-                Drum.Play();
+                radioManager = manager.activeRadio;
 
-                Bass.clip = Electro_B;
-                Bass.Play();
+                if (manager.activeRadio == 0)
+                {
+                    Drum.volume = 1.0f;
+                    Bass.volume = 1.0f;
+                    Lead.volume = 1.0f;
+                    Pad.volume = 1.0f;
 
-                Lead.clip = Electro_L;
-                Lead.Play();
+                    Drum.clip = Electro_D;
+                    Drum.Play();
 
-                Pad.clip = Electro_P;
-                Pad.Play();
+                    Bass.clip = Electro_B;
+                    Bass.Play();
+
+                    Lead.clip = Electro_L;
+                    Lead.Play();
+
+                    Pad.clip = Electro_P;
+                    Pad.Play();
+                }
+                else if (manager.activeRadio == 1)
+                {
+                    Drum.volume = 1.0f;
+                    Bass.volume = 1.0f;
+                    Lead.volume = 1.0f;
+                    Pad.volume = 1.0f;
+
+                    Drum.clip = Rock_D;
+                    Drum.Play();
+
+                    Bass.clip = Rock_B;
+                    Bass.Play();
+
+                    Lead.clip = Rock_L;
+                    Lead.Play();
+
+                    Pad.clip = Rock_P;
+                    Pad.Play();
+                }
+                else if (manager.activeRadio == 2)
+                {
+                    Drum.volume = 1.0f;
+                    Bass.volume = 1.0f;
+                    Lead.volume = 1.0f;
+                    Pad.volume = 1.0f;
+
+                    Drum.clip = HipHop_D;
+                    Drum.Play();
+
+                    Bass.clip = HipHop_B;
+                    Bass.Play();
+
+                    Lead.clip = HipHop_L;
+                    Lead.Play();
+
+                    Pad.clip = HipHop_P;
+                    Pad.Play();
+                }
+                else if (manager.activeRadio == 3)
+                {
+                    Drum.volume = 0.0f;
+
+                    Bass.volume = 0.0f;
+
+                    Lead.volume = 0.0f;
+
+                    Pad.volume = 0.0f;
+                }
             }
-            else if (manager.activeRadio == 1)
+
+            if (CharacterControl.characters[0].active == false)
             {
-                Drum.clip = Rock_D;
-                Drum.Play();
-
-                Bass.clip = Rock_B;
-                Bass.Play();
-
-                Lead.clip = Rock_L;
-                Lead.Play();
-
-                Pad.clip = Rock_P;
-                Pad.Play();
+                Drum.volume = 0;
             }
-            else if (manager.activeRadio == 2)
+
+            if (CharacterControl.characters[1].active == false)
             {
-                Drum.clip = HipHop_D;
-                Drum.Play();
-
-                Bass.clip = HipHop_B;
-                Bass.Play();
-
-                Lead.clip = HipHop_L;
-                Lead.Play();
-
-                Pad.clip = HipHop_P;
-                Pad.Play();
+                Bass.volume = 0;
             }
-            else if (manager.activeRadio == 3)
+            if (CharacterControl.characters[2].active == false)
             {
-                Drum.Stop();
+                Lead.volume = 0;
+            }
+            if (CharacterControl.characters[3].active == false)
+            {
+                Pad.volume = 0;
+            }
 
-                Bass.Stop();
 
-                Lead.Stop();
 
-                Pad.Stop();
-            } 
-        }
+
 
 	}
 }

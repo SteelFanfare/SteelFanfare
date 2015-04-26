@@ -90,6 +90,7 @@ public class PNJ : MonoBehaviour {
                     evangelisable = true;
                     transform.tag = "PNJ";
                     m_rigid.velocity = -dir * 400 * delta;
+                    Electro_Object.GetComponent<Animator>().SetBool("walking", true);
                 }
                 else  if (manager.activeRadio == 1) //rock
                 {
@@ -97,6 +98,7 @@ public class PNJ : MonoBehaviour {
                     evangelisable = false;
                     transform.tag = "PNJ";
                     m_rigid.velocity = dir * 100 * delta;
+                    Electro_Object.GetComponent<Animator>().SetBool("walking", true);
                 }
                 else if (manager.activeRadio == 2) //HipHop
                 {
@@ -104,6 +106,7 @@ public class PNJ : MonoBehaviour {
                     m_rigid.velocity = Vector2.zero;
                     Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
                     transform.position = newPos;
+                    Electro_Object.GetComponent<Animator>().SetBool("walking", false);
                 }
                 else if (manager.activeRadio == 3) //NoRadio
                 {
@@ -111,6 +114,7 @@ public class PNJ : MonoBehaviour {
                     m_rigid.velocity = Vector2.zero;
                     Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
                     transform.position = newPos;
+                    Electro_Object.GetComponent<Animator>().SetBool("walking", false);
                 }
                 
             }
@@ -122,6 +126,7 @@ public class PNJ : MonoBehaviour {
                     m_rigid.velocity = Vector2.zero;
                     Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
                     transform.position = newPos;
+                    Rock_Object.GetComponent<Animator>().SetBool("walking", false);
                 }
                 else if (manager.activeRadio == 1) //rock
                 {
@@ -129,6 +134,7 @@ public class PNJ : MonoBehaviour {
                     evangelisable = true;
                     transform.tag = "PNJ";
                     m_rigid.velocity = -dir * 400 * delta;
+                    Rock_Object.GetComponent<Animator>().SetBool("walking", true);
                 }
                 else if (manager.activeRadio == 2) //HipHop
                 {
@@ -136,6 +142,7 @@ public class PNJ : MonoBehaviour {
                     //aime pas
                     transform.tag = "PNJ";
                     m_rigid.velocity = dir * 100 * delta;
+                    Rock_Object.GetComponent<Animator>().SetBool("walking", true);
                 }
                 else if (manager.activeRadio == 3) //NoRadio
                 {
@@ -143,6 +150,7 @@ public class PNJ : MonoBehaviour {
                     m_rigid.velocity = Vector2.zero;
                     Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
                     transform.position = newPos;
+                    Rock_Object.GetComponent<Animator>().SetBool("walking", false);
                 }
             }
             else if (PNJ_Status == PNJ_Type.HipHop_FAN)
@@ -153,6 +161,7 @@ public class PNJ : MonoBehaviour {
                     //aime pas
                     transform.tag = "PNJ";
                     m_rigid.velocity = dir * 100 * delta;
+                    HipHop_Object.GetComponent<Animator>().SetBool("walking", true);
                 }
                 else if (manager.activeRadio == 1) //rock
                 {
@@ -160,6 +169,7 @@ public class PNJ : MonoBehaviour {
                     m_rigid.velocity = Vector2.zero;
                     Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
                     transform.position = newPos;
+                    HipHop_Object.GetComponent<Animator>().SetBool("walking", false);
                 }
                 else if (manager.activeRadio == 2) //HipHop
                 {
@@ -167,6 +177,7 @@ public class PNJ : MonoBehaviour {
                     evangelisable = true;
                     transform.tag = "PNJ";
                     m_rigid.velocity = -dir * 400 * delta;
+                    HipHop_Object.GetComponent<Animator>().SetBool("walking", true);
                 }
                 else if (manager.activeRadio == 3) //NoRadio
                 {
@@ -174,6 +185,7 @@ public class PNJ : MonoBehaviour {
                     m_rigid.velocity = Vector2.zero;
                     Vector3 newPos = transform.position - new Vector3(delta * 3, 0, 0);
                     transform.position = newPos;
+                    HipHop_Object.GetComponent<Animator>().SetBool("walking", false);
                 }
             }
         }
@@ -205,12 +217,24 @@ public class PNJ : MonoBehaviour {
     public void activation(int i)
     {
         if (i == 0)
+        {
             Ticket_Object_Electro.GetComponent<SpriteRenderer>().enabled = true;
+            Electro_Object.GetComponent<Animator>().SetTrigger("ticket");
+        }  
         else if (i == 1)
+        {
             Ticket_Object_Rock.GetComponent<SpriteRenderer>().enabled = true;
+            Rock_Object.GetComponent<Animator>().SetTrigger("ticket");
+        }
         else if (i == 2)
+        {
             Ticket_Object_HipHop.GetComponent<SpriteRenderer>().enabled = false;
+            HipHop_Object.GetComponent<Animator>().SetTrigger("ticket");
+        }
         else
-            Debug.Log("ERROR");
+        {
+            Debug.LogError("ERROR"); //LogError pour avoir du rouge
+        }
+       
     }
 }

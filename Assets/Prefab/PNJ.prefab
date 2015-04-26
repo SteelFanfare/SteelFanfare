@@ -915,6 +915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJ_Status: 0
+  flyerTexture: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   Electro_Object: {fileID: 152810}
   Rock_Object: {fileID: 147492}
   HipHop_Object: {fileID: 117354}
@@ -1077,7 +1078,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -725673835
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8a7f26ce28dd1f5408de177205802722, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21243482
 SpriteRenderer:
@@ -1233,7 +1234,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -725673835
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8a7f26ce28dd1f5408de177205802722, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21273952
 SpriteRenderer:
@@ -1415,7 +1416,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -725673835
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8a7f26ce28dd1f5408de177205802722, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba445de262f646c45a1743674c494a44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21293684
 SpriteRenderer:

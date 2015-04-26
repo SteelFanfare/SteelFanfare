@@ -13,7 +13,7 @@ public class PNJ : MonoBehaviour {
 
     //Now we can make a variable using that set as its type!
     public PNJ_Type PNJ_Status;
-
+    public Sprite flyerTexture;
 
     private Rigidbody2D m_rigid;
     private GameObject leader;
@@ -226,16 +226,19 @@ public class PNJ : MonoBehaviour {
         if (i == 0)
         {
             Ticket_Object_Electro.GetComponent<SpriteRenderer>().enabled = true;
+            Ticket_Object_Electro.GetComponent<SpriteRenderer>().sprite = flyerTexture;
             Electro_Object.GetComponent<Animator>().SetTrigger("ticket");
         }  
         else if (i == 1)
         {
             Ticket_Object_Rock.GetComponent<SpriteRenderer>().enabled = true;
+            Ticket_Object_Rock.GetComponent<SpriteRenderer>().sprite = flyerTexture;
             Rock_Object.GetComponent<Animator>().SetTrigger("ticket");
         }
         else if (i == 2)
         {
             Ticket_Object_HipHop.GetComponent<SpriteRenderer>().enabled = true;
+            Ticket_Object_HipHop.GetComponent<SpriteRenderer>().sprite = flyerTexture;
             HipHop_Object.GetComponent<Animator>().SetTrigger("ticket");
         }
         else

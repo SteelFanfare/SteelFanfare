@@ -177,7 +177,7 @@ public class Manager : MonoBehaviour {
 
 			Time.timeScale = 0.0f;
 
-			GameObject.Find ("RetryButton").GetComponent<Button> ().Select();
+            Invoke("GameOverScreen", 1.0f);
 		}
 	}
 
@@ -227,5 +227,21 @@ public class Manager : MonoBehaviour {
 		
 		GameObject.Find ("PickUpLife").GetComponent<AudioSource> ().Play ();
 	}
+
+    void GameOverScreen()
+    {
+        GameOver.SetActive(true);
+        GameObject.Find("hand_robot").transform.gameObject.SetActive(false);
+
+
+        GameObject.Find("FinalScore").GetComponent<Text>().text = score.ToString();
+        GameObject.Find("CountRobot").GetComponent<Text>().text = deadRobot.ToString();
+        GameObject.Find("CountElectro").GetComponent<Text>().text = deadElectro.ToString();
+        GameObject.Find("CountHipHop").GetComponent<Text>().text = deadHipHop.ToString();
+        GameObject.Find("CountRock").GetComponent<Text>().text = deadRock.ToString();
+
+		Time.timeScale = 0.0f;
+		GameObject.Find ("RetryButton").GetComponent<Button> ().Select();
+    }
 }
 

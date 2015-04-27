@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour {
 
-    public int lifes;
+    public int lifes = 4;
     public int score;
     public int PNJDead;
     public GameObject explosion;
@@ -154,7 +154,7 @@ public class Manager : MonoBehaviour {
 	{
         Instantiate(explosion, character.transform.position, Quaternion.identity);
 		lifes--;
-		
+
 		int i = 0;
 		while (caracControl.characters[i].gameObject != character) {
 			i++;
@@ -167,6 +167,7 @@ public class Manager : MonoBehaviour {
 		deadRobot++;
 
 		if (lifes <= 0) {
+			GameObject.Find("hand_robot").transform.gameObject.SetActive(false);
             Invoke("GameOverScreen", 1);
 		}
 	}
@@ -191,7 +192,6 @@ public class Manager : MonoBehaviour {
 				caracControl.characters[i].SetActive(true);
 				
 				lifes++;
-				Debug.Log (activeRadio);
 
 				switch(activeRadio) {
 					case (int)radio.NoRadio :
@@ -221,7 +221,6 @@ public class Manager : MonoBehaviour {
     void GameOverScreen()
     {
         GameOver.SetActive(true);
-        GameObject.Find("hand_robot").transform.gameObject.SetActive(false);
 
         GameObject.Find("FinalScore").GetComponent<Text>().text = score.ToString();
         GameObject.Find("CountRobot").GetComponent<Text>().text = deadRobot.ToString();
